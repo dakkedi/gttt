@@ -20,6 +20,6 @@ public class PlayerMovement : MonoBehaviour
 
 	private void FixedUpdate()
 	{
-        _rb.MovePosition(_rb.position + (_movementInput.normalized) * _speed * Time.fixedDeltaTime);
+		_rb.MovePosition(_rb.position + (_movementInput.normalized) * _speed * Time.fixedDeltaTime);
 	}
 }
