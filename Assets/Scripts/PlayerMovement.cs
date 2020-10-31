@@ -22,4 +22,10 @@ public class PlayerMovement : MonoBehaviour
 	{
 		_rb.MovePosition(_rb.position + (_movementInput.normalized) * _speed * Time.fixedDeltaTime);
 	}
+
+	private void OnTriggerEnter2D(Collider2D collision)
+	{
+		if (collision.gameObject.tag == "Treasure")
+			TreasureManager.Instance.PlayerCollidedWithTreasure(collision.gameObject);
+	}
 }
